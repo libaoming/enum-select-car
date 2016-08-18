@@ -9,17 +9,36 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    enum Cars: Int{
+        case BMW = 0
+        case TESLA = 1
+        case SUBARU = 2
+        case HONDA = 3
+    }
+    
+    
 
+    @IBOutlet weak var label: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        label.text = "please select you car...."
+        
+           }
+
+    @IBAction func onBtnTapped(sender: UIButton!) {
+        
+        if sender.tag == Cars.BMW.rawValue {
+            self.label.text = "BMW is awesome"
+        }else if sender.tag == Cars.HONDA.rawValue {
+            self.label.text = "Honda is awesome"
+        }else if sender.tag == Cars.TESLA.rawValue {
+            self.label.text = "Tesla is awesome"
+        }else if sender.tag == Cars.SUBARU.rawValue {
+            self.label.text = "SUBARU is awesome"
+        }
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+   
 }
 

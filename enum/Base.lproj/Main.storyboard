@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="enum" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,98 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qoc-Pe-9rq">
+                                <rect key="frame" x="200" y="27" width="200" height="546"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="az8-4i-DmZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="129"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="TS5-ab-5Y6"/>
+                                            <constraint firstAttribute="height" constant="129" id="nqY-Sv-ct0"/>
+                                        </constraints>
+                                        <state key="normal" image="bwm"/>
+                                        <connections>
+                                            <action selector="onBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vGd-IW-Hr6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7O2-jS-xuP">
+                                        <rect key="frame" x="0.0" y="139" width="200" height="129"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="129" id="3sc-kZ-H9y"/>
+                                            <constraint firstAttribute="width" constant="200" id="slF-yE-zY5"/>
+                                        </constraints>
+                                        <state key="normal" image="tesla"/>
+                                        <connections>
+                                            <action selector="onBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uqj-53-1xm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ITK-NC-S0i">
+                                        <rect key="frame" x="0.0" y="278" width="200" height="129"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="pDN-nZ-Mex"/>
+                                            <constraint firstAttribute="height" constant="129" id="vb2-bO-kAJ"/>
+                                        </constraints>
+                                        <state key="normal" image="subaru"/>
+                                        <connections>
+                                            <action selector="onBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sVI-I1-jow"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JjE-fN-KR1">
+                                        <rect key="frame" x="0.0" y="417" width="200" height="129"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="Z94-5J-ezi"/>
+                                            <constraint firstAttribute="height" constant="129" id="yC3-Kv-TH4"/>
+                                        </constraints>
+                                        <state key="normal" image="honda"/>
+                                        <connections>
+                                            <action selector="onBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vRH-lI-PAq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKn-61-S8d">
+                                <rect key="frame" x="241" y="566" width="100" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="kNS-2o-csS"/>
+                                    <constraint firstAttribute="width" constant="300" id="tks-Om-exJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AKn-61-S8d" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9ji-LZ-Ysb"/>
+                            <constraint firstItem="qoc-Pe-9rq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AGn-Ol-BEc"/>
+                            <constraint firstItem="AKn-61-S8d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a5b-oN-O28"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="AKn-61-S8d" secondAttribute="bottom" constant="10" id="g7k-jd-zbv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AKn-61-S8d" secondAttribute="trailing" constant="9" id="is0-AV-Su1"/>
+                            <constraint firstItem="qoc-Pe-9rq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nng-u3-0Qr"/>
+                            <constraint firstItem="AKn-61-S8d" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="242" id="yxA-wR-0RK"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="9ji-LZ-Ysb"/>
+                                <exclude reference="is0-AV-Su1"/>
+                                <exclude reference="yxA-wR-0RK"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="AKn-61-S8d" id="uPZ-54-SbS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="318" y="164"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bwm" width="884" height="497"/>
+        <image name="honda" width="640" height="480"/>
+        <image name="subaru" width="1024" height="768"/>
+        <image name="tesla" width="2647" height="1600"/>
+    </resources>
 </document>
